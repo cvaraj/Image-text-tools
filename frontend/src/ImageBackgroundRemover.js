@@ -1,8 +1,15 @@
 import React, { useState, useRef } from 'react';
 import { removeBackground } from '@imgly/background-removal';
 import { Link } from 'react-router-dom';
+import useSEO from './useSEO';
 
 export default function ImageBackgroundRemover() {
+  useSEO({
+    title: 'Free Image Background Remover',
+    description: 'Remove backgrounds from images instantly and for free with professional precision directly in your browser.',
+    keywords: 'remove background, image background remover, clear background, transparent background maker'
+  });
+
   const [image, setImage] = useState(null);
   const [processedImage, setProcessedImage] = useState(null);
   const [loading, setLoading] = useState(false);

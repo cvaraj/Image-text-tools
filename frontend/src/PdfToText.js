@@ -1,8 +1,15 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import useSEO from './useSEO';
 
 export default function PdfToText() {
+  useSEO({
+    title: 'PDF to Text Extractor',
+    description: 'Instantly extract raw text content from PDF files for free. Fast, secure, and reliable PDF parser.',
+    keywords: 'pdf to text, extract text from pdf, parse pdf online, convert pdf'
+  });
+
   const [file, setFile] = useState(null);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);

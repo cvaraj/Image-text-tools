@@ -1,8 +1,15 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import useSEO from './useSEO';
 
 export default function ImageToWord() {
+  useSEO({
+    title: 'Image to Word Converter',
+    description: 'Convert any image containing text directly into an editable Word document instantly and for free.',
+    keywords: 'image to word, convert image to docx, image ocr to word'
+  });
+
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');

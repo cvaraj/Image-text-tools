@@ -1,7 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useSEO from './useSEO';
 
 export default function Home() {
+  useSEO({
+    title: 'Home',
+    description: 'ImageExtractor provides free, lightning-fast tools for document conversion, OCR text extraction, and image processing.',
+    keywords: 'ocr, pdf to word, background remover, image to pdf, free tools'
+  });
+
   const tools = [
     {
       path: '/image-to-text',

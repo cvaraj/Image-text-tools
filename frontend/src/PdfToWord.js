@@ -1,8 +1,15 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import useSEO from './useSEO';
 
 export default function PdfToWord() {
+  useSEO({
+    title: 'PDF to Word Converter',
+    description: 'Easily convert PDF files into editable Word (.docx) documents in seconds. Keep your formatting intact.',
+    keywords: 'pdf to word, convert pdf to docx, edit pdf in word, pdf to word converter'
+  });
+
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');

@@ -1,8 +1,15 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import useSEO from './useSEO';
 
 export default function ImageToText() {
+  useSEO({
+    title: 'Image to Text OCR',
+    description: 'Easily extract text from images using advanced optical character recognition (OCR). Accurate and fast.',
+    keywords: 'image to text, ocr, extract text from image, image reader'
+  });
+
   const [image, setImage] = useState(null);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);

@@ -1,8 +1,15 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import useSEO from './useSEO';
 
 export default function ImageToPdf() {
+  useSEO({
+    title: 'Image to PDF Converter',
+    description: 'Quickly transform your images (JPG, PNG, GIF) into high-quality PDF documents. No watermarks, completely free.',
+    keywords: 'image to pdf, convert jpg to pdf, picture to pdf, free image to pdf converter'
+  });
+
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
